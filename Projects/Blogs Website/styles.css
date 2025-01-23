@@ -10,7 +10,7 @@ body{
 }
 
 .container{
-    max-width: 95vw;
+    max-width: 66vw;
     padding: 2rem 1rem;
     margin: 0 auto;
 }
@@ -43,12 +43,30 @@ a{
 
 }
 
+@media  (min-width: 650px){
+    .main_container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media  (min-width: 1080px){
+    .main_container{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media  (min-width: 1340px){
+    .main_container{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
 
 .card_container{
     display: flex;
     flex-direction: column;
     border: 1px solid rgb(48, 43, 43);
-    border-radius: 2px;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 
@@ -56,7 +74,13 @@ a{
 .card_image_container{
     position: relative;
     overflow: hidden;
-    height: 14rem;
+    height: 11rem;
+}
+
+@media (min-width: 768px){
+    .card_image_container{
+        height: 16rem;
+    }
 }
 
 .card_image{
@@ -77,4 +101,69 @@ a{
 .card_container:hover .card_image{
     transform: scale(1.1);
     transition-duration: 200ms;
+}
+
+.card_title{
+    font-size: 1rem;
+    font-weight: 600;
+    color: black;
+    line-height: 1.5rem;
+    margin-bottom: 0.4rem;
+    color: black;
+}
+
+.card_title_anchor:hover .card_title {
+    color: rgb(42, 42, 172);
+}
+
+.card_desc{
+    color: rgb(87, 70, 70);
+}
+
+.card_footer_container{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+   align-items: flex-end;
+
+}
+
+.author_container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem; 
+
+}
+
+.author_avatar_container{
+    height: 2.5rem;
+    width: 2.5rem;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.397);
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.185);
+    
+}
+
+.author_info_container{
+    display: flex;
+    flex-direction: column;
+}
+
+.author_name{
+    color: rgba(0, 0, 255, 0.59);
+}
+
+.author_date{
+    color: gray;
+}
+
+.card_tag_container{
+    font-size: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.486);
+    border-radius: 2px;
+    line-height: 1.3rem;
+    padding: 0.25rem 0.5rem;
+    color: grey;
 }
