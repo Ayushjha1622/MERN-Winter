@@ -1,3 +1,6 @@
+// Creates a new array with elements that pass a condition.
+
+
 // const arr = [ 1,2,3,4,5]
 // const even = arr.filter((item) => item % 2 === 0)
 // console.log(even);

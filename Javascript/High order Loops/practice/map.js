@@ -1,3 +1,7 @@
+// Creates a new array by transforming each element in the original array.
+
+
+
 // const arr = [1,2,3]
 // const double = arr.map((item) => item *2)
 // console.log(double);
