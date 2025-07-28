@@ -40,17 +40,34 @@ const myArr = new Array(0,1,2,3,4,5,6)
 
 //  slice , splice
 
-console.log("A", myArr);
+// console.log("A", myArr);
 
 const myn1 = myArr.slice(1,3)
 
-console.log(myn1);
-console.log("B", myArr);
+// console.log(myn1);
+// console.log("B", myArr);
 
 
 const myn2 = myArr.splice(1,3)
-console.log("C",myArr);
-console.log(myn2);
+// console.log("C",myArr);
+// console.log(myn2);
+
+
+
+let a = [1,2,3,4,5]
+let b = [7,8,9,10]
+let c = a.concat(b)
+// console.log(c);
+
+// console.log(a.copyWithin(2,0));
+
+
+const t = [[1,2],[3,4],[5,6]];
+const y = t.flat();
+console.log(y);
+
+
+
 
 
 
