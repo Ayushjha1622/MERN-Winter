@@ -46,3 +46,28 @@ myCoding.forEach((item) => {
     console.log(item.languageName);
     
 })
+
+
+const domain = [
+    {
+        name: "Ayush jha",
+        Domain: "Full-stack"
+    },
+    {
+        name: "adi",
+        Domain: "Front-end"
+    },
+    {
+        name: "Rahul",
+        Domain: "Back-end"
+
+    },
+    {
+        name: "Rohit",
+        Domain: "design"
+    }
+]
+
+domain.forEach((item) => {
+    console.log(`${item.name}: ${item.Domain}`);
+})
