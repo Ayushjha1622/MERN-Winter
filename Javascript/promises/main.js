@@ -64,32 +64,32 @@
 
 
 
-const promiseFive = new Promise(function(resolve,reject){
-    setTimeout(function(){
-                let error = true
-                if(!error){
-                    resolve({username: "ayush",email: "abc@gmail.com",password: "12345"})
-                }else{
-                    reject("Error")
-                }
-            },1000)
-})
+// const promiseFive = new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//                 let error = true
+//                 if(!error){
+//                     resolve({username: "ayush",email: "abc@gmail.com",password: "12345"})
+//                 }else{
+//                     reject("Error")
+//                 }
+//             },1000)
+// })
 
 
-async function consumePromiseFive() {
+// async function consumePromiseFive() {
 
-    try {
-        const response = await promiseFive
-        console.log(response);
-    } catch (error) {
-        console.log("error");
+//     try {
+//         const response = await promiseFive
+//         console.log(response);
+//     } catch (error) {
+//         console.log("error");
         
-    }
+//     }
    
     
-}
+// }
 
-consumePromiseFive()
+// consumePromiseFive()
 
 // async function getAllUsers() {
 //    try {
@@ -105,12 +105,62 @@ consumePromiseFive()
 // getAllUsers()
 
 
-fetch('https://jsonplaceholder.typicode.com/users')
-.then((response) => {
-    return response.json()
-})
-.then((data) => {
-    console.log(data);
+// fetch('https://jsonplaceholder.typicode.com/users')
+// .then((response) => {
+//     return response.json()
+// })
+// .then((data) => {
+//     console.log(data);
     
-}).catch((error) => console.log(error)
-)
+// }).catch((error) => console.log(error)
+// )
+
+
+// let firstPromise = new Promise((resolve, reject) => {
+//     setTimeout(function sayMyName(){
+//     console.log("ayush jha");
+    
+// }, 5000)
+    
+// });
+
+
+// let promise1 = new Promise((resolve, reject) => {
+//     let success = true;
+//     if(success){
+//         resolve("Promise 1 resolved");
+//         }
+//         else{
+//             reject("Promise 1 rejected");
+//             }
+// });
+
+
+// promise1.then((message) => {
+//     console.log("my messagew is : " + message);
+// }).catch((error) => {
+//     console.log("Error: " + error);
+    
+// })
+
+let promise1 = new Promise((resolve),(reject) => {
+    setTimeout(resolve, 1000, "First");
+
+})
+let promise2= new Promise((resolve),(reject) => {
+    setTimeout(resolve, 2000,"First");
+
+})
+let promise3= new Promise((resolve),(reject) => {
+    setTimeout(resolve, 4000,"First");
+
+})
+
+Promise.all([ promise1,promise2,promise3])
+.then((values) => {
+    console.log(values);
+    })
+
+.catch((Error) => {
+    console.log(Error);
+})
