@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #myDiv {
+      width: 200px;
+      height: 100px;
+      background-color: lightblue;
+      text-align: center;
+      line-height: 100px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+    <!-- <h2>JavaScript Event Listener Examples</h2> -->
+     <!-- <button id="myButton">Click Me</button><br><br> -->
+
+
+     <!-- <div id="myDiv">Hover over me!</div>
+      
+     
+     -->
+
+     <p>Press any key and check the console</p>
+
+     <script>
+        //<!-- document.getElementById("myButton").addEventListener("click", function(){
+            //alert("button clicked!");
+       // }) -->
+
+      // document.getElementById("myDiv").addEventListener////("mouseover", function() {
+      //alert("Mouse is over the div!");
+    //});
+
+    document.addEventListener("keydown", function(event){
+        console.log(event.key);
+    })
+     
+     </script>
+
+</body>
+</html>
