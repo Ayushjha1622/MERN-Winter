@@ -1,0 +1,18 @@
+{
+  "name": "nodejs_basics_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start":"node script.js",
+    "chacha": "echo \"this is good\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "accessibility": "^6.1.0"
+  }
+}
